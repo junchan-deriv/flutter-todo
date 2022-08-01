@@ -88,9 +88,16 @@ class _MyHomePageState extends State<MyHomePage> {
       _descriptionField.clear();
       _showToast(ctx, "Added");
       setState(() {
-        _list.insert(0,entry);
+        _list.insert(0, entry);
       });
     }
+  }
+
+  @override
+  void dispose() {
+    _titleField.dispose();
+    _descriptionField.dispose();
+    super.dispose();
   }
 
   /// Clear the TODOs
