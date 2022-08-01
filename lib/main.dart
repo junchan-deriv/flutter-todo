@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _descriptionField.clear();
       _showToast(ctx, "Added");
       setState(() {
-        _list.add(entry);
+        _list.insert(0,entry);
       });
     }
   }
